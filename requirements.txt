@@ -1,0 +1,9 @@
+pip install dash
+pip install pycaret
+pip install pandas
+pip install numpy
+pip install scikit-learn
+pip install plotly
+pip install joblib
+pip install datetime
+pip install shap

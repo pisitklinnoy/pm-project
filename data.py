@@ -11,21 +11,22 @@ pm25_data = {
     "longitude": 100.4767  # ลองจิจูดของหาดใหญ่
 }
 
+
 # สร้าง DataFrame จากข้อมูล
 df_pm25 = pd.DataFrame([pm25_data])
 
 # โหลดโมเดล
 def load_models():
-    model_pm = joblib.load("D:/last-project/modelPM/model_PM25.pkl")
-    model_temp = joblib.load("D:/last-project/modelPM/model_temperature.pkl")
-    model_humidity = joblib.load("D:/last-project/modelPM/model_humidity.pkl")
+    model_pm = joblib.load("D:/project-term/modelPM/model_PM25.pkl")
+    model_temp = joblib.load("D:/project-term/modelPM/model_temperature.pkl")
+    model_humidity = joblib.load("D:/project-term/modelPM/model_humidity.pkl")
     return model_pm, model_temp, model_humidity
 
 # โหลดข้อมูล
 def load_data():
-    future_pm = pd.read_csv("D:/last-project/pm_2.5/future_pm_data_14days.csv")
-    future_temp = pd.read_csv("D:/last-project/pm_2.5/future_temperature_data_14days.csv")
-    future_humidity = pd.read_csv("D:/last-project/pm_2.5/future_humidity_data_14days.csv")
+    future_pm = pd.read_csv("D:/project-term/pm_2.5/future_pm_data_14days.csv")
+    future_temp = pd.read_csv("D:/project-term/pm_2.5/future_temperature_data_14days.csv")
+    future_humidity = pd.read_csv("D:/project-term/pm_2.5/future_humidity_data_14days.csv")
 
     # แปลง datetime
     for df in [future_pm, future_temp, future_humidity]:
